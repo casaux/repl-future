@@ -1,0 +1,210 @@
+html,body,.au-body{
+	height:100%;
+}
+
+/*
+html *{
+	font-family: sans-serif !important;
+}*/
+
+main{
+	background: #fff;
+}
+
+.banner{
+	background: #313131;
+	color: #FFFFFF;
+	}
+
+.banner{
+	padding-left:25px;
+	padding-top:10px;
+	padding-bottom:10px; 
+}
+
+
+.banner a
+{color: #FFFFFF;
+}
+
+.banner a:hover
+{color: #FFFFFF;
+}
+
+.header{
+	background:#0080A2;
+}
+
+.header .logo, .header .user{
+	margin:32px 0 32px 0;
+	height:60px;
+}
+
+.header .logo.au-body.au-body--dark{
+	float:left;
+	margin-left:24px;
+	background-color: transparent;
+}
+
+.header .user{
+	float:right;
+	display:table;
+	margin-right:24px;
+}
+
+.header .user .au-body--dark{
+	background:transparent;
+   display: table-cell;
+    vertical-align: middle;
+}
+
+.au-page-alerts{
+	background:#fff;
+}
+
+.footer{
+	background:#4C4C4C;
+	margin-top:120px;
+	min-height:200px;
+	
+}
+
+
+.footer-wrapper{
+	margin:auto;
+}
+
+.footer iframe{
+	margin:auto;
+	height:400px;
+	overflow:hidden; 
+	width:100%;
+
+}
+
+.hr{
+	margin-top:3rem;
+	padding-top:3rem;
+	border-top:1px solid #7f7f7f;
+}
+
+
+.error{
+	color:#ea4200;
+}
+
+
+#modal{
+	background:rgba(0,0,0,0.7);
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:999999;
+	display:none;
+}
+
+hr{
+	margin-top:6rem !important;
+	margin-bottom:3rem !important;
+}
+
+a.cancel{
+	color:#ff635c;
+}
+
+.au-callout{
+	margin-top:0 !important;	
+}
+
+.date-entry{
+	margin-top:1rem;
+}
+
+.date-entry label{
+	font-size:.875rem;
+}
+
+.date-entry .date-day, .date-entry .date-month{
+	width:25%;	
+	margin-right:2%;
+	float:left;
+}
+
+.date-entry .date-year{
+	width:46%;
+	float:left;
+} 
+
+.date-guidance{
+	clear:both;
+	padding-top:0.85rem;
+	position:relative;
+	font-size:.875rem;
+}
+
+.sex-guidance{
+	clear:both;
+	position:relative;
+	font-size:.875rem;
+}
+
+
+.form-descriptor{
+	margin-bottom:0.45rem !important;
+}
+
+/* mobile */
+@media only screen and  (max-width: 575px) { 
+	/*.au-grid .container{background:red}*/
+	.au-grid .col-xs-6{width:100%;}
+}
+
+/* tablet */
+@media only screen and  (min-width: 576px) { 
+	/*.au-grid .container{background:pink}*/
+	.au-grid .col-xs-6{width:100%;}
+}
+
+/* desktop */
+@media only screen and  (min-width: 1010px) {
+	/*.au-grid .container{background:yellow}*/
+	.au-grid .col-xs-6{width:50%;}
+}
+/*
+*/
+
+.au-body .au-accordion__title:focus,.au-accordion__title:focus{outline-color:#12b5ea;}
+.au-body a:focus{outline-color:#12b5ea;}
+.au-body a::-moz-focus-inner{border:0}.au-body [tabindex="0"]:focus,.au-body :target{outline-color:#9263DE}
+.au-btn:focus,a.au-btn:focus{outline-color:#12b5ea;}
+.au-cta-link:focus{outline-color:#12b5ea;}
+.au-control-input__input:focus+.au-control-input__text:before,.au-control-input__input:focus+.au-control-input__text:after{outline-color:#12b5ea;}
+.au-direction-link:focus{outline-color:#12b5ea;}
+.au-body .au-progress-indicator__link:focus,.au-progress-indicator__link:focus{outline-color:#12b5ea;}
+.au-select:focus{outline-color:#12b5ea;}
+.au-skip-link__link:active,.au-skip-link__link:focus{outline-color:#12b5ea;}
+.au-tags>li>a:focus,.au-tags>li>button:focus,.au-tags>dd>a:focus,.au-tags>dd>button:focus{outline-color:#12b5ea;}
+.au-text-input:focus{outline-color:#12b5ea;}
+	
+	
+			
+/*
+focus over-rides for accessibility
+dark theme
+*/			
+			
+.au-accordion--dark .au-body .au-accordion__title:focus,.au-accordion--dark .au-accordion__title:focus{outline-color:#FFE17D;}
+.au-body.au-body--dark a:focus{outline-color:#FFE17D;}
+.au-body.au-body--dark [tabindex="0"]:focus,.au-body.au-body--dark :target{outline-color:#FFE17D;}
+.au-btn.au-btn--dark:focus,a.au-btn.au-btn--dark:focus{outline-color:#FFE17D;}
+.au-cta-link.au-cta-link--dark:focus{outline-color:#FFE17D;}
+.au-control-input--dark .au-control-input__input:focus+.au-control-input__text:before,.au-control-input--dark .au-control-input__input:focus+.au-control-input__text:after{outline-color:#FFE17D;}
+.au-direction-link.au-direction-link--dark:focus{outline-color:#FFE17D;}
+.au-body--dark .au-progress-indicator--dark .au-body .au-progress-indicator__link:focus,.au-progress-indicator--dark .au-body .au-progress-indicator__link:focus,.au-body--dark .au-progress-indicator--dark .au-progress-indicator__link:focus,.au-progress-indicator--dark .au-progress-indicator__link:focus{outline-color:#FFE17D;}
+.au-select.au-select--dark:focus{outline-color:#FFE17D;}
+.au-tags.au-tags--dark>li>a:focus,.au-tags.au-tags--dark>li>button:focus,.au-tags.au-tags--dark>dd>a:focus,.au-tags.au-tags--dark>dd>button:focus{outline-color:#FFE17D;}
+.au-text-input.au-text-input--dark:focus{outline-color:#FFE17D;}
+
+
+
+

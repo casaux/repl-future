@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Bob's Flying school | My CASA</title>
+
+	<link rel="stylesheet" href="css/furnace.min.css">
+	<!--<link rel="stylesheet" href="css/lead.css">-->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="live-demo au-body au-grid js">
+	<header class="au-header logo au-body au-body--dark" role="banner">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-9 col-xs-7">
+	        <a class="au-header__brand" href="00-user-homepage.html">
+	          <img class="au-header__brand-image" alt="my CASA" src="img/CASALOGO-white-i.svg">
+					</a>
+	      </div>
+	      <div class="col-md-3 col-xs-5"><a class="au-btn au-btn--dark" href="signed-out.html">Sign out</a></div>
+	    </div>
+	  </div>
+	</header>
+
+			<div class="banner">
+				<div class=container>
+					<div class="row">
+					 <div class="col-md-12">
+				This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class=container>
+			<div class="row">
+			 <div class="col-md-12">
+				<nav class="au-breadcrumbs" aria-label="breadcrumb">
+			  <ul class="au-link-list au-link-list--inline">
+			    <li><a href="00-user-homepage.html">Home</a></li>
+			    <li><a href="01-organisation-CRP-SendApproval.html">Bob's Flying School</a></li>
+					<li>Aeronautical Radio Operator Certificate (AROC)</li>
+			  </ul>
+			</nav>
+		</div>
+	</div>
+		</div>
+<main id="main-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-12"><br>
+					<h2 class="au-display-xl m-t-2">Aeronautical Radio Operator Certificate (AROC)</h2>
+					<a class="au-direction-link au-direction-link--left" href="javascript:history.back()">Back</a>
+
+
+					<form name="aroc" method="#">
+<br>
+<div id="copy-students">
+	<div class="student-details">
+		<ul class="grid">
+			<li class="row bg-dark">
+				<div class="col-md-1 col-xs-2">
+					<label class="au-control-input">
+						<input class="au-control-input__input" type="checkbox" id="select-all">
+						<span class="au-control-input__text form-text"></span><span class="sr-only">Select All</span>
+					</label>
+				</div>
+				<div class="col-md-3 col-xs-6">
+					<strong>Name</strong>
+				</div>
+					<div class="col-md-3 col-xs-4">
+						<strong>ARN</strong>
+					</div>
+			</li>
+			<li class="row">
+				<div class="col-md-1 col-xs-2">
+					<label class="au-control-input hidden">
+						<input class="au-control-input__input" type="checkbox" name="checkbox-ex" disabled>
+						<span class="au-control-input__text"></span>
+						<span class="sr-only">Peter Smith</span>
+					</label>
+				</div>
+				<div class="col-md-3 col-xs-6">
+					<span class="student-name">Peter Smith</span>
+					<span class="badge badge-warning">An AROC already exists</span>
+				</div>
+				<div class="col-md-3 col-xs-4">
+					<span class="student-arn">123 4568</span>
+				</div>
+			</li>
+			<li class="row">
+				<div class="col-md-1 col-xs-2">
+					<label class="au-control-input">
+						<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+						<span class="au-control-input__text"></span>
+						<span class="sr-only">Ava Smith</span>
+					</label>
+				</div>
+				<div class="col-md-3 col-xs-6">
+					<span class="student-name">Ava Williams</span>
+				</div>
+				<div class="col-md-3 col-xs-4">
+					<span class="student-arn">223 4568</span>
+				</div>
+			</li>
+
+		</ul>
+</div>
+
+</div>
+						<h3>Select Students</h3>
+					<div class="form-section">
+					<label for="repl">Select students from previous application</label>
+					<select id="repl" class="au-select au-select--block">
+					  <option value="0">Please Select</option>
+						<option value="1">02 Aug - RePL Multi Rotor 2kg to 25k</option>
+					</select>
+					</div>
+
+<p>&nbsp;</p>
+					<a href="#" class="au-btn au-btn--secondary" id="addStudent">Manually add Students</a>
+
+					<section id="arn-details">
+					<h3>Add Student</h3>
+					<div class="form-section">
+						<label for="surname-input">Family Name</label>
+						<span id="surname-error" style="color:#d82c52;"></span>
+						<input class="au-text-input" name="text-input" id="surname-input" type="text">
+
+					</div>
+					<div class="form-section">
+						<label for="arn-input">ARN</label>
+						<span id="arn-error" style="color:#d82c52;"></span>
+						<input class="au-text-input" name="text-input" id="arn-input" type="number">
+
+					</div>
+					<div class="">
+						<button type="button" class="au-btn au-btn--secondary" id="addPilot">
+						<!--<span class="fas fa-user-plus"></span>--> Add Student
+					</button>
+					</div>
+				</section>
+
+<p>&nbsp;</p>
+				</form>
+		</div>
+	</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="AROC-upload-1.html" class="au-btn" id="next">Provide Certified Documents</a>
+				<div class="save-exit">
+				<a href="01-organisation.html#id-progress" class="au-btn au-btn--secondary">
+				Save and exit
+				</a>&nbsp; to continue this application later
+			 </div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+		<div class="footer-wrapper">
+			<iframe src="footer.html" frameborder="0" border="0" scrolling="no"></iframe>
+		</div>
+</footer>
+<script type="text/javascript" src="js/furnace.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+$('#copy-students,#arn-details').hide();
+
+$('#repl').on('change', function() {
+	var s = document.getElementById("repl");
+	var sVal = s.options[s.selectedIndex].value;
+	if (sVal == 1){
+		$('#copy-students').show();
+	}
+	else{
+		$('#copy-students').hide();
+	}
+});
+
+$('#select-all').click(function(event) {
+if(this.checked) {
+		// Iterate each checkbox
+		$(':checkbox').each(function() {
+				this.checked = true;
+		});
+}
+else {
+	$(':checkbox').each(function() {
+				this.checked = false;
+		});
+}
+});
+$('#addStudent').click(function(){
+	$('#arn-details').show();
+	$('#surname-input').focus();
+	$('#addStudent').hide();
+
+});
+
+</script>
+</body>
+</html>

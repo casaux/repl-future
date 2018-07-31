@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bob's Flying school | myCASA</title>
+
+	<link rel="stylesheet" href="css/furnace.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/main.css">
+
+
+
+
+
+</head>
+
+<body class="live-demo au-body au-grid arn-application js">
+	<header class="au-header logo au-body au-body--dark" role="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 col-xs-7">
+					<a class="au-header__brand" href="00-user-homepage.html">
+						<img class="au-header__brand-image" alt="my CASA" src="img/CASALOGO-white-i.svg">
+					</a>
+				</div>
+				<div class="col-md-3 col-xs-5"><a class="au-btn au-btn--dark" href="signed-out.html">Sign out</a></div>
+			</div>
+		</div>
+	</header>
+
+			<div class="banner">
+				<div class=container>
+					<div class="row">
+					 <div class="col-md-12">
+				This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class=container>
+			<div class="row">
+			 <div class="col-md-12">
+				<nav class="au-breadcrumbs" aria-label="breadcrumb">
+				<ul class="au-link-list au-link-list--inline">
+					<li><a href="00-user-homepage.html">Home</a></li>
+					<li><a href="01-organisation-CRP-SendApproval.html">Bob's Flying School</a></li>
+					<li>Aeronautical Radio Operator Certificate (AROC)</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+		</div>
+
+<main>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-12"><br>
+				<h1 class="au-header-heading">Ava Williams Documents</h1>
+				<a class="au-direction-link au-direction-link--left" href="javascript:history.back()">Back</a><br><br>
+<form>
+			<section>
+				<div class="au-callout">
+					<strong>You will need to provide some of the following evidence:</strong>
+					<ul class="m-t-1">
+						<li>Completed or still attending secondary school education in Australia/NZ or other country in English medium
+					(supporting documentation example: confirmation letter from school)</li>
+						<li>Worked three of the last five years in Australia/NZ or specified country (supporting documentation example: letter of
+					confirmation from employer, group certificates)</li>
+					<li>Met general English test criteria as outlined in CASR Part 61 Manual of Standard (IELTS, TOEIC-SP or TOEFL)</li>
+					<li>Sighted evidence they have completed a CASA approved General English Language Training Course</li>
+				</ul>
+			</div>
+
+			<h4>Upload document</h4>
+
+
+			<input type="file" id="myFile" class="inputfile" onchange="myFunction()"><br>
+			<label for="myFile">Choose a file</label>
+			<span class="form-text">Accepted file types are PDF documents (.pdf) and the following image formats: .jpg, .bmp and .png</span>
+			<p id="file"></p>
+		 </section>
+				<div class="form-navigation">
+				<br><br>
+				<p><a class="au-btn" href="AROC-summary.html">Finalise Application</a></p>
+
+					<hr />
+
+<a href="saved.html" class="au-btn au-btn--secondary">
+  Save and exit
+</a>&nbsp; to continue this application later
+
+				</div>
+
+			</form>
+
+
+</div>
+</div>
+</div>
+</main>
+<footer>
+	<div class="footer">
+			<div class="footer-wrapper">
+				<iframe src="footer.html" frameborder="0" border="0" scrolling="no"></iframe>
+			</div>
+		</div>
+</footer>
+<script type="text/javascript" src="js/furnace.min.js"></script>
+
+<script src="js/jquery.min.js"></script>
+
+ <script src="js/jquery.js"></script>
+
+<script>
+function myFunction(){
+	$('.au-page-alerts').hide();
+    var x = document.getElementById("myFile");
+    var txt = "";
+    if ('files' in x) {
+        if (x.files.length == 0) {
+            txt = " ";
+        } else {
+            for (var i = 0; i < x.files.length; i++) {
+                txt += "<h4>Uploaded file</h4>";
+                var file = x.files[i];
+                if ('name' in file) {
+                    txt += "<span class='filename'> " + file.name + "<a href='#'>Delete</a></span><br>";
+								}
+                /*if ('size' in file) {
+                    txt += "size: " + file.size + " bytes <br>";
+                }*/
+            }
+        }
+    }
+
+    document.getElementById("file").innerHTML = txt;
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Bob's Flying school | My CASA</title>
+
+	<link rel="stylesheet" href="css/furnace.min.css">
+	<!--<link rel="stylesheet" href="css/lead.css">-->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="live-demo au-body au-grid js">
+	<header class="au-header logo au-body au-body--dark" role="banner">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-9 col-xs-7">
+	        <a class="au-header__brand" href="00-user-homepage.html">
+	          <img class="au-header__brand-image" alt="my CASA" src="img/CASALOGO-white-i.svg">
+	          <!--<div class="au-header__text">
+	            <h1 class="au-header__heading">myCASA</h1>
+	            <div class="au-header__subline">
+	              Service description that could be a little longer
+	            </div>
+	          </div>-->
+	        </a>
+	      </div>
+	      <div class="col-md-3 col-xs-5"><a class="au-btn au-btn--dark" href="signed-out.html">Sign out</a></div>
+	    </div>
+	  </div>
+
+	</header>
+
+			<div class="banner">
+				<div class=container>
+					<div class="row">
+					 <div class="col-md-12">
+				This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class=container>
+			<div class="row">
+			 <div class="col-md-12">
+				<nav class="au-breadcrumbs" aria-label="breadcrumb">
+			  <ul class="au-link-list au-link-list--inline">
+			    <li><a href="00-user-homepage.html">myCASA</a></li>
+			    <li><a href="01-organisation.html">Bob's Flying School</a></li>
+					<li>Remote Pilot Licence (RePL)</li>
+			  </ul>
+			</nav>
+		</div>
+	</div>
+		</div>
+<main id="main-content">
+	<section class="organisation">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+		<div class="org-logo">
+		</div>
+		<div class="org-title">
+			<h1 class="au-display-xl">Bob's Flying School</h1>
+			<h2 class="au-display-sm m-t-1">ARN: 321 4567</h2>
+		</div>
+	</div>
+	</div>
+	</div>
+	</section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+					<h2 class="au-display-xl">Remote Pilot Licence (RePL)</h2>
+					<h3>Add Pilot</h3>
+					<a class="au-direction-link au-direction-link--left" href="02-student.html">Back</a>
+					<div role="alert" class="au-body au-page-alerts au-page-alerts--warning" id="arn-check">
+					  <h3>Warning</h3>
+					  <p>ARN ...</p>
+					</div>
+					<div role="alert" class="au-body au-page-alerts au-page-alerts--success" id="save">
+					  <h3>Saved successfully</h3>
+					</div>
+					<form name="repal" method="#">
+					<div class="form-section">
+						<label for="text-input">Given Name</label>
+						<input class="au-text-input" name="text-input" id="text-input" type="text">
+				  </div>
+					<div class="form-section">
+						<label for="text-input">Family Name</label>
+						<input class="au-text-input" name="text-input" id="text-input" type="text">
+				  </div>
+					<div class="form-section">
+						<label for="text-input">ARN</label>
+						<input class="au-text-input" name="text-input" id="arn-input" type="text">
+						<span id="arn-error" style="color:red;"></span>
+				  </div>
+						<p>&nbsp;</p>
+
+						<h3>Remotely Piloted Aircraft details</h3>
+
+						<div clas="form-section">
+							<label for="select1block">Make</label>
+							<select id="select1block" class="au-select au-select--block">
+								<option value="1">Please select</option>
+								<option value="2">DJI</option>
+								<option value="3">Parrot</option>
+								<option value="4">3DR</option>
+								<option value="5">EHang</option>
+								<option value="6">Power Vision</option>
+								<option value="7">Syma</option>
+								<option value="8">Walkera</option>
+								<option value="8">Yuneec</option>
+							 <option value="8">Other</option>
+							</select>
+						</div><br>
+						<div class="form-section">
+							<label for="select1block">Model</label>
+							<select id="select1block" class="au-select au-select--block">
+								<option value="1">Please select</option>
+								<option value="2">Inspire 1</option>
+								<option value="3">Inspire 1 Pro/Raw</option>
+								<option value="4">Inspire 2</option>
+								<option value="5">Mavic Air</option>
+								<option value="6">Mavic Pro</option>
+								<option value="7">Mavic Platinum</option>
+								<option value="8">Phantom 1</option>
+								<option value="9">Phantom FC40</option>
+								<option value="10">Phantom 2</option>
+								<option value="11">Phantom 2 Vision</option>
+								<option value="12">Phantom 2 Vision+</option>
+								<option value="13">Phantom 3 Advanced</option>
+								<option value="14">Phantom 3 Professional</option>
+								<option value="15">Phantom 3 SE</option>
+								<option value="16">Phantom 3 Standard</option>
+								<option value="17">Phantom 4</option>
+								<option value="18">Phantom 4 Advanced</option>
+								<option value="19">Phantom 4 Pro</option>
+							</select>
+						</div>
+
+				  </form>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="#save" class="au-btn" id="save-button">Save</a>
+				<div class="save-exit">
+				<a href="#" class="au-btn au-btn--secondary">
+				Save and exit
+				</a>&nbsp; to continue this application later
+			 </div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+		<div class="footer-wrapper">
+			<iframe src="footer.html" frameborder="0" border="0" scrolling="no"></iframe>
+		</div>
+</footer>
+<script type="text/javascript" src="js/furnace.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</body>
+</html>
