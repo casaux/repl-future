@@ -41,7 +41,7 @@
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 			  <ul class="au-link-list au-link-list--inline">
 			    <li><a href="00-user-homepage.html">Home</a></li>
-					<li><a href="01-organisation.html">Bob's Flying School</a></li>
+			    <li><a href="01-organisation.html">Bob's Flying School</a></li>
 					<li>Remote Pilot Licence (RePL)</li>
 			  </ul>
 			</nav>
@@ -49,6 +49,7 @@
 	</div>
 		</div>
 <main id="main-content">
+
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-12"><br>
@@ -60,6 +61,22 @@
 				</div>
 				<div role="alert" class="au-body au-page-alerts au-page-alerts--error" id="finalise-error">
 					<h3>Please add a student</h3>
+				</div>
+				<div role="alert" class="au-body au-page-alerts au-page-alerts--error" id="no-arn">
+					<h3>100 points of identification required</h3>
+					<p>This student has not completed 100 points of identification for their ARN and cannot be issued a RePL. An email notice has been sent to the student.</p>
+				</div>
+				<div role="alert" class="au-body au-page-alerts au-page-alerts--error" id="existing-arn">
+					<h3>This student already has an existing RePL with a:</h3>
+					<ul>
+						<li>Category - Multi rotor</li>
+						<li>Weight - Class 2kg to 25kg</li>
+						<li>Type - Small</li>
+					</ul>
+				</div>
+				<div role="alert" class="au-body au-page-alerts au-page-alerts--error" id="suspension">
+					<h3>Studen has a suspension on their ARN</h3>
+					<!--<p>This student has a suspension on their ARN. They will not be able to receive a RePL, please inform the student. An email has also been sent to the student about their suspension and RePL.</p>-->
 				</div>
 					<h2 class="au-display-xl m-t-2">Remote Pilot Licence (RePL)</h2>
 					<a class="au-direction-link au-direction-link--left" href="javascript:history.back()">Back</a>
@@ -127,7 +144,7 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-12 m-t-3">
+			<div class="col-lg-8 col-md-12 m-t-3">
 				<a href="03-paymentsummary.html" class="au-btn" id="finalise">Finalise application</a>
 				<div class="save-exit">
 				<a href="01-organisation.html#id-progress" class="au-btn au-btn--secondary">
@@ -193,7 +210,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
 <script>
-	$('#arn-check, #save, #warning, #error, .edit-student, .student-details, #finalise-error').hide();
+	$('#arn-check, #save, #warning, #error, .edit-student, .student-details, #finalise-error, #no-arn, #suspension, #existing-arn').hide();
 	//var arn = document.getElementById("arn-input").value;
 	//var surname = document.getElementById("surname-input").value;
 
@@ -218,10 +235,11 @@
 		var val2 = $("#arn-input").val();
 		$('test').hide();
 		//alert(val1);
+
 		if(val1 == "" || val2 == ""){
 		//alert (timesClicked);
 			$('#error').show();
-			$('#save, #finalise-error, .test').hide();
+			$('#save, #finalise-error, .test, #no-arn, #suspension, #existing-arn').hide();
 			document.getElementById("arn-error").textContent="The ARN does not match the Student's detail";
 			document.getElementById("surname-error").textContent="Please check the surname and try again";
 			$("#arn-input, #surname-input").addClass('form-error');
@@ -232,16 +250,16 @@
 				$(this).parent().find('span').remove();
 			});
 		}
-		else {
+		if (val1 == "Smith" || val1 == "Williams"){
 			var classPeter = $("#peter").hasClass("hidden");
 			var classAva = $("#ava").hasClass("hidden");
 			if(classPeter){
-				$( "#arn-input" ).removeClass('form-error');
-				$( "#surname-input" ).removeClass('form-error');
+				$("#arn-input").removeClass('form-error');
+				$("#surname-input").removeClass('form-error');
 				$("#arn-input").val("");
 				$("#surname-input").val("");
 				//alert(surname);
-				$('#error, #arn-error,#surname-error, #finalise-error, .test').hide();
+				$('#error, #arn-error,#surname-error, #finalise-error, .test, #no-arn, #suspension, #existing-arn').hide();
 				$('#save, .student-details').show();
 				$('.grid, #peter').removeClass('hidden');
 				//timesClicked++;
@@ -250,7 +268,7 @@
 				//alert(surname);
 				$("#arn-input").val("");
 				$("#surname-input").val("");
-				$('#error, #arn-error, #surname-error, #finalise-error, .test').hide();
+				$('#error, #arn-error, #surname-error, #finalise-error, .test, #no-arn, #suspension, #existing-arn').hide();
 				$( "#arn-input" ).removeClass('form-error');
 				$( "#surname-input" ).removeClass('form-error');
 				$('#save').show();
@@ -258,6 +276,24 @@
 				//timesClicked = 0;
 			}
 	}
+			if(val1 == "Wilson"){
+				$('#error, #finalise-error, #existing-arn, #suspension, #surname-error, #arn-error').hide();
+				$('#save').hide();
+				$("#arn-input, #surname-input").removeClass('form-error');
+				$('#no-arn').show();
+			}
+			if(val1 == "Brown"){
+				$('#error, #no-arn, #finalise-error, #existing-arn').hide();
+				$('#save').hide();
+				$("#arn-input, #surname-input").removeClass('form-error');
+				$('#suspension').show();
+			}
+			if(val1 == "Johnson"){
+				$('#error, #no-arn, #finalise-error, #suspension, #surname-error, #arn-error').hide();
+				$('#save').hide();
+				$("#arn-input, #surname-input").removeClass('form-error');
+				$('#existing-arn').show();
+			}
 	});
 	$('#finalise').click(function(){
 		var classPeter = $("#peter").hasClass("hidden");
@@ -265,7 +301,7 @@
 
 		if (classPeter && classAva){
 				$('#finalise-error').show();
-				$('#error, #arn-error, #surname-error, #save, .test').hide();
+				$('#error, #arn-error, #surname-error, #save, .test, #no-arn, #suspension, #existing-arn').hide();
 				document.getElementById("arn-error").textContent="Please enter a ARN";
 				document.getElementById("surname-error").textContent="Please enter a Family name";
 				$("#arn-input, #surname-input").addClass('form-error');
