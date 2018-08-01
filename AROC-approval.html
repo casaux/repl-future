@@ -42,7 +42,7 @@
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 			  <ul class="au-link-list au-link-list--inline">
 			    <li><a href="CRP-homepage.html">Home</a></li>
-					<li>Aeronautical Radio Operator Certificate (AROC)</li>
+					<li><abbr title="Aeronautical Radio Operator Certificate">AROC</abbr> and <abbr title="General English Language Proficiency">GELP</abbr></li>
 			  </ul>
 			</nav>
 		</div>
@@ -51,41 +51,45 @@
 <main id="main-content">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-12"><br>
+			<div class="col-lg-8 col-md-12">
 				<div role="alert" class="au-body au-page-alerts au-page-alerts--error" id="error">
 					<p>Declaration not completed</p>
 				</div>
-					<h2 class="au-display-xl">Aeronautical Radio Operator Certificate (AROC)</h2>
+					<h2 class="au-display-xl"><abbr title="Aeronautical Radio Operator Certificate">AROC</abbr> and <abbr title="General English Language Proficiency">GELP</abbr></h2>
 					<a class="au-direction-link au-direction-link--left" href="javascript:history.back()">Back</a>
-					<h3>Application Summary</h3>
-
+					<h3>Student Summary</h3>
 							<div class="student-details">
 								<ul class="grid">
 									<li class="row">
-										<div class="col-md-3 col-xs-4">
+										<div class="col-md-2 col-xs-4">
 											<strong>Name</strong>
 										</div>
-											<div class="col-md-3 col-xs-4">
+											<div class="col-md-2 col-xs-4">
 												<strong>ARN</strong>
 											</div>
-											<div class="col-md-3 col-xs-4">
+											<div class="col-md-3 col-xs-4 hidden-sm-down">
 												<strong>Document/s</strong>
 											</div>
 									</li>
-									<li class="row">
-										<div class="col-md-3 col-xs-3">
-											<span class="student-name">AVA Williams</span>
+									<li class="row" id="student-approved">
+										<div class="col-md-2 col-xs-4">
+											<span class="student-name">Ava Williams</span>
 										</div>
-										<div class="col-md-3 col-xs-3">
-											<span class="student-arn">223 4568</span>
+										<div class="col-md-2 col-xs-4">
+											<span class="student-arn">2234568</span>
 										</div>
-										<div class="col-md-4 col-xs-4">
+										<div class="col-md-4 col-xs-12 p-t-b-0">
 											<span class="student-arn"><a href="#">School-confirmation-letter.pdf</a></span><br>
 											<span class="student-arn"><a href="#">IELTS-results.pdf</a></span>
 										</div>
-										<div class="col-md-2 col-xs-2">
+										<div class="col-md-2 col-xs-12">
+											<a href="#" class="btn-delete padding-0" id="approve">
+											  <span class="fas fa-check"></span> Approve
+											</a>
+										</div>
+										<div class="col-md-2 col-xs-12">
 											<a href="#" class="btn-delete padding-0"  data-toggle="modal" data-target="#deletePilot-ava">
-											  <span class="fas fa-minus-circle"></span> Delete
+											  <span class="fas fa-minus-circle"></span> Reject
 											</a>
 										</div>
 									</li>
@@ -138,6 +142,12 @@
   	}
 		else {return true;}
 	});
+
+	$('#approve').click(function(){
+			$('#student-approved').css('background-color', '#f5fff5')
+			$(this).text('Approved');
+	});
+
 </script>
 </body>
 </html>
